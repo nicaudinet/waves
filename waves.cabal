@@ -28,6 +28,7 @@ library
       Wave.Graph
       Wave.Audio.Pitch
       Wave.Audio.Waves
+      Wave.Audio.Envelope
   other-modules:
       Paths_waves
   default-language: Haskell2010

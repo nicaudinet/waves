@@ -4,7 +4,8 @@ module Wave.Audio.Waves where
 
 import Data.Monoid
 
-type WaveFn = Double -> Double
+type Time = Double
+type WaveFn = Time -> Double
 
 instance Monoid Double where
   mempty  = 0

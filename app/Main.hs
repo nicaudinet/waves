@@ -6,11 +6,13 @@ import System.IO
 
 import Wave.Audio.Pitch
 import Wave.Audio.Waves
+import Wave.Audio.Envelope
 import Wave.Builder
 import Wave.Sampling
 
 audio :: WaveFn
-audio = applyProgression cgafProg sineWave
+audio = applyEnvelope env (applyFreq a4 sineWave)
+  where env = Envelope (VC 0.5 2) (VC 0.2 (-2)) 2 (VC 0.3 (-2))
 
 channels = 1
 sampleRate = 44100
