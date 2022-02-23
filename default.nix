@@ -1,3 +1,7 @@
-{ pkgs ? import <nixpkgs> {} }:
+let
+  
+  pkgs = import ./nixpkgs.nix;
 
-pkgs.haskellPackages.callCabal2nix "waves" ./. {}
+in
+
+  pkgs.haskellPackages.callCabal2nix "waves" ./. {}
