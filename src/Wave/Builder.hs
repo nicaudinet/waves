@@ -1,6 +1,6 @@
 module Wave.Builder where
 
-import Data.ByteString.Lazy.Builder
+import Data.ByteString.Builder
 import Data.Int
 import Data.Word
 

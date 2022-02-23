@@ -7,9 +7,11 @@ import Data.Monoid
 type Time = Double
 type WaveFn = Time -> Double
 
+instance Semigroup Double where
+  (<>) = (+)
+
 instance Monoid Double where
   mempty  = 0
-  mappend = (+)
 
 combine
   :: (a -> a -> a)

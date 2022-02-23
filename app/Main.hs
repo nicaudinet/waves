@@ -1,6 +1,6 @@
 module Main where
 
-import Data.ByteString.Lazy.Builder
+import Data.ByteString.Builder
 import Data.Monoid ((<>))
 import System.IO
 
