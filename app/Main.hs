@@ -23,5 +23,6 @@ waveFile = WaveFile channels sampleRate bitDepth samples
 main :: IO ()
 main = do
   let filename = "a.wav"
-      build = \handle -> hPutBuilder handle (waveFilePcm16Builder waveFile)
-  withFile filename WriteMode build
+  putStrLn ("Generating " <> filename)
+  withFile filename WriteMode $
+    \handle -> hPutBuilder handle (waveFilePcm16Builder waveFile)
